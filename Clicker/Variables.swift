@@ -8,4 +8,7 @@
 
 import Foundation
 
-var score = 0
+var score = 0.0
+
+var time1 = [Double]()
+var cost1 = 15.0

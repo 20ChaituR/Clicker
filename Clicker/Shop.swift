@@ -9,10 +9,16 @@
 import UIKit
 
 class Shop: UIViewController {
+    
+    @IBOutlet var numClick1: UILabel!
+    @IBOutlet var costClick1: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = String(score)
+        showScore()
+        scheduledTimerWithTimeInterval()
+        numClick1.text = String(time1.count)
+        costClick1.text = String(Int((cost1)*NSDecimalNumber(decimal:pow(1.15, time1.count)).doubleValue))
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +29,26 @@ class Shop: UIViewController {
     
     @IBOutlet var label: UILabel!
 
+    @IBAction func click1(_ sender: Any) {
+        if (Decimal(score) >= Decimal(cost1)*pow(1.15, time1.count)) {
+            score = score - cost1
+            time1.append(NSDate().timeIntervalSince1970)
+            numClick1.text = String(time1.count)
+            costClick1.text = String(Int((cost1)*NSDecimalNumber(decimal:pow(1.15, time1.count)).doubleValue))
+            showScore()
+        }
+    }
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(Shop.showScore), userInfo: nil, repeats: true)
+    }
+    
+    func showScore(){
+        label.text = String(Int(score))
+        print(score)
+    }
+    
     /*
     // MARK: - Navigation
 

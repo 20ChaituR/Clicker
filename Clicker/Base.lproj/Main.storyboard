@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,15 +80,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-qS-Ced">
+                                <rect key="frame" x="16" y="72" width="58" height="30"/>
+                                <state key="normal" title="Clicker 1"/>
+                                <connections>
+                                    <action selector="click1:" destination="iTk-7g-V0e" eventType="touchUpInside" id="UFv-tA-8zf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDU-zh-7T7">
+                                <rect key="frame" x="255" y="76" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLe-wO-dd7">
+                                <rect key="frame" x="16" y="110" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xDU-zh-7T7" firstAttribute="top" secondItem="kfH-Ot-h2I" secondAttribute="bottom" constant="12" id="NZR-YM-0ck"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="G6l-qS-Ced" secondAttribute="leading" id="PEF-Qe-1CN"/>
+                            <constraint firstItem="G6l-qS-Ced" firstAttribute="top" secondItem="kfH-Ot-h2I" secondAttribute="bottom" constant="8" id="PWl-TU-qSf"/>
                             <constraint firstItem="4YE-Wt-8bH" firstAttribute="top" secondItem="NJk-nM-8gr" secondAttribute="bottom" constant="20" id="Tgd-Z8-EEi"/>
                             <constraint firstItem="NJk-nM-8gr" firstAttribute="centerX" secondItem="aIh-Ix-rlX" secondAttribute="centerX" id="Tmo-Ac-ndD"/>
+                            <constraint firstItem="sLe-wO-dd7" firstAttribute="top" secondItem="G6l-qS-Ced" secondAttribute="bottom" constant="8" id="g9z-ts-aVl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xDU-zh-7T7" secondAttribute="trailing" id="mJT-vB-k6r"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sLe-wO-dd7" secondAttribute="leading" id="yuq-iO-9jN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="costClick1" destination="sLe-wO-dd7" id="heY-YF-YWN"/>
                         <outlet property="label" destination="NJk-nM-8gr" id="NTh-fm-3Si"/>
+                        <outlet property="numClick1" destination="xDU-zh-7T7" id="OPb-hl-KWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibj-hS-Lat" userLabel="First Responder" sceneMemberID="firstResponder"/>
