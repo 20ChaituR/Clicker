@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="klf-7C-u3j">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Home" customModule="Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZy-eY-CgH">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Click"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35H-hK-3Sy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click the button to start playing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn4-dm-DBr">
+                                <rect key="frame" x="16" y="626" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-C1-y7u">
+                                <rect key="frame" x="169" y="406" width="36" height="30"/>
+                                <state key="normal" title="Shop"/>
+                                <connections>
+                                    <segue destination="iTk-7g-V0e" kind="show" id="lJ2-QQ-H8C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tn4-dm-DBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dH-8A-VUW"/>
+                            <constraint firstItem="uJT-C1-y7u" firstAttribute="top" secondItem="UZy-eY-CgH" secondAttribute="bottom" constant="58" id="1dK-w1-FGi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tn4-dm-DBr" secondAttribute="bottom" constant="20" id="5AJ-ID-LPu"/>
+                            <constraint firstItem="uJT-C1-y7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StM-N8-F0w"/>
+                            <constraint firstItem="UZy-eY-CgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTg-Tn-pN6"/>
+                            <constraint firstItem="UZy-eY-CgH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgQ-Wv-Qwn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e7m-nD-URC"/>
+                    <connections>
+                        <outlet property="label" destination="tn4-dm-DBr" id="2Sn-rB-d0k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Shop-->
+        <scene sceneID="3LY-1z-TXm">
+            <objects>
+                <viewController id="iTk-7g-V0e" customClass="Shop" customModule="Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfH-Ot-h2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="4YE-Wt-8bH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aIh-Ix-rlX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the shop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJk-nM-8gr">
+                                <rect key="frame" x="124" y="626" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4YE-Wt-8bH" firstAttribute="top" secondItem="NJk-nM-8gr" secondAttribute="bottom" constant="20" id="Tgd-Z8-EEi"/>
+                            <constraint firstItem="NJk-nM-8gr" firstAttribute="centerX" secondItem="aIh-Ix-rlX" secondAttribute="centerX" id="Tmo-Ac-ndD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="NJk-nM-8gr" id="NTh-fm-3Si"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibj-hS-Lat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.8" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P2u-7W-NZo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="klf-7C-u3j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6NK-eV-Rvw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Ef-r2-J4p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuS-zm-zjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
