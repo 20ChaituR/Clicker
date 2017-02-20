@@ -99,23 +99,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-HR-wzD">
+                                <rect key="frame" x="16" y="181" width="60" height="30"/>
+                                <state key="normal" title="Clicker 2"/>
+                                <connections>
+                                    <action selector="click2:" destination="iTk-7g-V0e" eventType="touchUpInside" id="X3a-4S-X8N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz4-ae-ICm">
+                                <rect key="frame" x="16" y="219" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eg-7P-5l4">
+                                <rect key="frame" x="348.5" y="186" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Kz4-ae-ICm" secondAttribute="leading" id="LP2-7N-YOc"/>
                             <constraint firstItem="xDU-zh-7T7" firstAttribute="top" secondItem="kfH-Ot-h2I" secondAttribute="bottom" constant="12" id="NZR-YM-0ck"/>
                             <constraint firstAttribute="leadingMargin" secondItem="G6l-qS-Ced" secondAttribute="leading" id="PEF-Qe-1CN"/>
                             <constraint firstItem="G6l-qS-Ced" firstAttribute="top" secondItem="kfH-Ot-h2I" secondAttribute="bottom" constant="8" id="PWl-TU-qSf"/>
+                            <constraint firstItem="Kz4-ae-ICm" firstAttribute="top" secondItem="QwU-HR-wzD" secondAttribute="bottom" constant="8" id="QvM-Dy-OjT"/>
                             <constraint firstItem="4YE-Wt-8bH" firstAttribute="top" secondItem="NJk-nM-8gr" secondAttribute="bottom" constant="20" id="Tgd-Z8-EEi"/>
                             <constraint firstItem="NJk-nM-8gr" firstAttribute="centerX" secondItem="aIh-Ix-rlX" secondAttribute="centerX" id="Tmo-Ac-ndD"/>
                             <constraint firstItem="sLe-wO-dd7" firstAttribute="top" secondItem="G6l-qS-Ced" secondAttribute="bottom" constant="8" id="g9z-ts-aVl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Eg-7P-5l4" secondAttribute="trailing" id="jkA-WB-PAo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xDU-zh-7T7" secondAttribute="trailing" id="mJT-vB-k6r"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="QwU-HR-wzD" secondAttribute="leading" id="myc-n3-0Tl"/>
+                            <constraint firstItem="Kz4-ae-ICm" firstAttribute="top" secondItem="0Eg-7P-5l4" secondAttribute="bottom" constant="12" id="r5h-9V-dJQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sLe-wO-dd7" secondAttribute="leading" id="yuq-iO-9jN"/>
+                            <constraint firstItem="QwU-HR-wzD" firstAttribute="top" secondItem="sLe-wO-dd7" secondAttribute="bottom" constant="50" id="zam-hW-zNu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="costClick1" destination="sLe-wO-dd7" id="heY-YF-YWN"/>
+                        <outlet property="costClick2" destination="Kz4-ae-ICm" id="f0r-16-r7T"/>
                         <outlet property="label" destination="NJk-nM-8gr" id="NTh-fm-3Si"/>
                         <outlet property="numClick1" destination="xDU-zh-7T7" id="OPb-hl-KWn"/>
+                        <outlet property="numClick2" destination="0Eg-7P-5l4" id="RVj-VM-Da4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibj-hS-Lat" userLabel="First Responder" sceneMemberID="firstResponder"/>

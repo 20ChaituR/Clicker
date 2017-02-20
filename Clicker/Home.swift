@@ -30,8 +30,12 @@ class Home: UIViewController {
     func updateScore(){
         let time = NSDate().timeIntervalSince1970
         for i in 0 ..< time1.count {
-            score = score + 0.1*(time - time1[i])
+            score = score + cps1*(time - time1[i])
             time1[i] = time
+        }
+        for i in 0 ..< time2.count {
+            score = score + cps2*(time - time2[i])
+            time2[i] = time
         }
         showScore()
     }
