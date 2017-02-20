@@ -524,6 +524,7 @@
 				CB836AC01E5B70FE007B58E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB836AC11E5B70FE007B58E3 /* Build configuration list for PBXNativeTarget "ClickerTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +533,7 @@
 				CB836AC31E5B70FE007B58E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB836AC41E5B70FE007B58E3 /* Build configuration list for PBXNativeTarget "ClickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +542,7 @@
 				CB836AC61E5B70FE007B58E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

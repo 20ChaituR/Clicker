@@ -22,9 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZy-eY-CgH">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Click"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZy-eY-CgH">
+                                <rect key="frame" x="169" y="303" width="48" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="441"/>
+                                <state key="normal" title="C"/>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35H-hK-3Sy"/>
                                 </connections>
@@ -36,21 +37,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-C1-y7u">
-                                <rect key="frame" x="169" y="406" width="36" height="30"/>
-                                <state key="normal" title="Shop"/>
+                                <rect key="frame" x="147" y="573" width="81" height="30"/>
+                                <state key="normal" title="Apple Store"/>
                                 <connections>
                                     <segue destination="iTk-7g-V0e" kind="show" id="lJ2-QQ-H8C"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="UFI-V0-RRL">
+                                <rect key="frame" x="88" y="207" width="199" height="253"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tn4-dm-DBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dH-8A-VUW"/>
-                            <constraint firstItem="uJT-C1-y7u" firstAttribute="top" secondItem="UZy-eY-CgH" secondAttribute="bottom" constant="58" id="1dK-w1-FGi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tn4-dm-DBr" secondAttribute="bottom" constant="20" id="5AJ-ID-LPu"/>
                             <constraint firstItem="uJT-C1-y7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StM-N8-F0w"/>
+                            <constraint firstItem="UFI-V0-RRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ua4-kv-ETX"/>
                             <constraint firstItem="UZy-eY-CgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTg-Tn-pN6"/>
+                            <constraint firstItem="UFI-V0-RRL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qly-TW-wDa"/>
                             <constraint firstItem="UZy-eY-CgH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgQ-Wv-Qwn"/>
+                            <constraint firstItem="tn4-dm-DBr" firstAttribute="top" secondItem="uJT-C1-y7u" secondAttribute="bottom" constant="23" id="zCV-ws-eY6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e7m-nD-URC"/>
@@ -81,8 +87,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-qS-Ced">
-                                <rect key="frame" x="16" y="72" width="58" height="30"/>
-                                <state key="normal" title="Clicker 1"/>
+                                <rect key="frame" x="16" y="72" width="51" height="30"/>
+                                <state key="normal" title="Apple 1"/>
                                 <connections>
                                     <action selector="click1:" destination="iTk-7g-V0e" eventType="touchUpInside" id="UFv-tA-8zf"/>
                                 </connections>
@@ -100,8 +106,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-HR-wzD">
-                                <rect key="frame" x="16" y="181" width="60" height="30"/>
-                                <state key="normal" title="Clicker 2"/>
+                                <rect key="frame" x="16" y="181" width="72" height="30"/>
+                                <state key="normal" title="Macintosh"/>
                                 <connections>
                                     <action selector="click2:" destination="iTk-7g-V0e" eventType="touchUpInside" id="X3a-4S-X8N"/>
                                 </connections>
@@ -168,4 +174,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iphone" width="140" height="180"/>
+    </resources>
 </document>
