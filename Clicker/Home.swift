@@ -37,6 +37,18 @@ class Home: UIViewController {
             score = score + cps2*(time - time2[i])
             time2[i] = time
         }
+        for i in 0 ..< time3.count {
+            score = score + cps3*(time - time3[i])
+            time3[i] = time
+        }
+        for i in 0 ..< time4.count {
+            score = score + cps4*(time - time4[i])
+            time4[i] = time
+        }
+        for i in 0 ..< time5.count {
+            score = score + cps5*(time - time5[i])
+            time5[i] = time
+        }
         showScore()
     }
     

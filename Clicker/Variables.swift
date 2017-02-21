@@ -43,18 +43,18 @@ func initializeVars () {
         time2 = defaults.array(forKey: "time2") as! [Double]
         cost2 = defaults.double(forKey: "cost2")
         cps2 = defaults.double(forKey: "cps2")
+    
+        time3 = defaults.array(forKey: "time3") as! [Double]
+        cost3 = defaults.double(forKey: "cost3")
+        cps3 = defaults.double(forKey: "cps3")
         
-        time3 = [Double]()
-        cost3 = 1100.0
-        cps3 = 8.0
+        time4 = defaults.array(forKey: "time4") as! [Double]
+        cost4 = defaults.double(forKey: "cost4")
+        cps4 = defaults.double(forKey: "cps4")
         
-        time4 = [Double]()
-        cost4 = 12000.0
-        cps4 = 47.0
-        
-        time5 = [Double]()
-        cost5 = 130000.0
-        cps5 = 260.0
+        time5 = defaults.array(forKey: "time5") as! [Double]
+        cost5 = defaults.double(forKey: "cost5")
+        cps5 = defaults.double(forKey: "cps5")
     }
 }
 
@@ -69,5 +69,32 @@ func setVars () {
     defaults.setValue(cost2, forKey: "cost2")
     defaults.setValue(cps2, forKey: "cps2")
     
+    defaults.setValue(time3, forKey: "time3")
+    defaults.setValue(cost3, forKey: "cost3")
+    defaults.setValue(cps3, forKey: "cps3")
+    
+    defaults.setValue(time4, forKey: "time4")
+    defaults.setValue(cost4, forKey: "cost4")
+    defaults.setValue(cps4, forKey: "cps4")
+    
+    defaults.setValue(time5, forKey: "time5")
+    defaults.setValue(cost5, forKey: "cost5")
+    defaults.setValue(cps5, forKey: "cps5")
+    
     defaults.synchronize()
+}
+
+func toString(num: Double) -> String {
+    var x = Int(num)
+    var s = ""
+    var i = 1
+    while (x > 0) {
+        s = String(x % 10) + s
+        x = x / 10
+        if (i % 3 == 0) {
+            s = "," + s
+        }
+        i += 1
+    }
+    return s
 }
