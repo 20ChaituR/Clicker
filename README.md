@@ -1,6 +1,7 @@
 # Clicker
 
 THIS IS A BETA VERSION OF THE GAME. IT IS CURRENTLY ONLY AVAILABLE ON GITHUB.
+[![forthebadge](http://forthebadge.com/images/badges/made-with-swift.svg)](http://forthebadge.com)
 
 # Download from Github
 
