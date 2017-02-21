@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tn4-dm-DBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dH-8A-VUW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tn4-dm-DBr" secondAttribute="bottom" constant="20" id="5AJ-ID-LPu"/>
@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-PP-7uc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">It's actually really simple to play this game. You just tap the phone to get money. If you have enough money, you can go to the Apple Store and spend it! Each item in the store generates even more money!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -149,12 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the shop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJk-nM-8gr">
-                                <rect key="frame" x="124" y="626" width="126" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-qS-Ced">
                                 <rect key="frame" x="16" y="72" width="51" height="30"/>
                                 <state key="normal" title="Apple 1"/>
@@ -250,10 +244,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the shop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJk-nM-8gr">
+                                <rect key="frame" x="124" y="323" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="c01-6p-9Fm" secondAttribute="leading" id="5VQ-0w-Rl9"/>
+                            <constraint firstItem="NJk-nM-8gr" firstAttribute="centerY" secondItem="aIh-Ix-rlX" secondAttribute="centerY" id="7Ku-RD-aJm"/>
                             <constraint firstItem="gw0-bt-43d" firstAttribute="top" secondItem="fQ0-lz-Osv" secondAttribute="bottom" constant="8" id="KXM-Bi-XpC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X5B-Cv-tYi" secondAttribute="trailing" id="LLs-X3-A3f"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Kz4-ae-ICm" secondAttribute="leading" id="LP2-7N-YOc"/>
@@ -264,7 +265,6 @@
                             <constraint firstItem="h8o-PS-Y3G" firstAttribute="top" secondItem="X5B-Cv-tYi" secondAttribute="bottom" constant="94" id="Qqo-Ch-l1d"/>
                             <constraint firstItem="Kz4-ae-ICm" firstAttribute="top" secondItem="QwU-HR-wzD" secondAttribute="bottom" constant="8" id="QvM-Dy-OjT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="gJz-ht-IZP" secondAttribute="leading" id="Rgk-jE-bNu"/>
-                            <constraint firstItem="4YE-Wt-8bH" firstAttribute="top" secondItem="NJk-nM-8gr" secondAttribute="bottom" constant="20" id="Tgd-Z8-EEi"/>
                             <constraint firstItem="NJk-nM-8gr" firstAttribute="centerX" secondItem="aIh-Ix-rlX" secondAttribute="centerX" id="Tmo-Ac-ndD"/>
                             <constraint firstItem="gJz-ht-IZP" firstAttribute="top" secondItem="c01-6p-9Fm" secondAttribute="bottom" constant="8" id="Wxw-gh-Azb"/>
                             <constraint firstItem="c01-6p-9Fm" firstAttribute="top" secondItem="gw0-bt-43d" secondAttribute="bottom" constant="50" id="YVS-bo-svr"/>
@@ -308,13 +308,20 @@
         <!--Navigation Controller-->
         <scene sceneID="P2u-7W-NZo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="klf-7C-u3j" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" navigationBarHidden="YES" hidesBarsOnSwipe="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="klf-7C-u3j" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6NK-eV-Rvw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="e8Q-tg-u9h">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Ef-r2-J4p"/>
                     </connections>
