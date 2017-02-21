@@ -21,9 +21,9 @@ class Shop: UIViewController {
         showScore()
         scheduledTimerWithTimeInterval()
         numClick1.text = String(time1.count)
-        costClick1.text = String(Int((cost1)*NSDecimalNumber(decimal:pow(1.15, time1.count)).doubleValue))
+        costClick1.text = String(Int(cost1))
         numClick2.text = String(time2.count)
-        costClick2.text = String(Int((cost2)*NSDecimalNumber(decimal:pow(1.15, time2.count)).doubleValue))
+        costClick2.text = String(Int(cost2))
         // Do any additional setup after loading the view.
     }
 
@@ -35,21 +35,23 @@ class Shop: UIViewController {
     @IBOutlet var label: UILabel!
 
     @IBAction func click1(_ sender: Any) {
-        if (Decimal(score) >= Decimal(cost1)*pow(1.15, time1.count)) {
+        if (score >= cost1) {
             score = score - cost1
             time1.append(NSDate().timeIntervalSince1970)
+            cost1 = cost1*1.15
             numClick1.text = String(time1.count)
-            costClick1.text = String(Int((cost1)*NSDecimalNumber(decimal:pow(1.15, time1.count)).doubleValue))
+            costClick1.text = String(Int(cost1))
             showScore()
         }
     }
     
     @IBAction func click2(_ sender: Any) {
-        if (Decimal(score) >= Decimal(cost2)*pow(1.15, time2.count)) {
+        if (score >= cost2) {
             score = score - cost2
             time2.append(NSDate().timeIntervalSince1970)
+            cost2 = cost2*1.15
             numClick2.text = String(time2.count)
-            costClick2.text = String(Int((cost2)*NSDecimalNumber(decimal:pow(1.15, time2.count)).doubleValue))
+            costClick2.text = String(Int(cost2))
             showScore()
         }
     }

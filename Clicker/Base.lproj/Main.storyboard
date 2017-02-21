@@ -46,11 +46,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="UFI-V0-RRL">
                                 <rect key="frame" x="88" y="207" width="199" height="253"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPz-fj-nNq">
+                                <rect key="frame" x="16" y="72" width="52" height="30"/>
+                                <state key="normal" title="Tutorial"/>
+                                <connections>
+                                    <segue destination="aW3-7D-QS0" kind="show" id="l9u-nb-QbZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tn4-dm-DBr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dH-8A-VUW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tn4-dm-DBr" secondAttribute="bottom" constant="20" id="5AJ-ID-LPu"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="oPz-fj-nNq" secondAttribute="leading" id="AuE-ax-DqE"/>
+                            <constraint firstItem="oPz-fj-nNq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="JN7-YH-sSY"/>
                             <constraint firstItem="uJT-C1-y7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StM-N8-F0w"/>
                             <constraint firstItem="UFI-V0-RRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ua4-kv-ETX"/>
                             <constraint firstItem="UZy-eY-CgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTg-Tn-pN6"/>
@@ -67,6 +76,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qBB-ef-EF4">
+            <objects>
+                <viewController id="aW3-7D-QS0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KNv-UV-STH"/>
+                        <viewControllerLayoutGuide type="bottom" id="3LE-jC-UCQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Tu-hi-opa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-PP-7uc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">It's actually really simple to play this game. You just tap the phone to get money. If you have enough money, you can go to the Apple Store and spend it! Each item in the store generates even more money!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KTE-PP-7uc" firstAttribute="top" secondItem="KNv-UV-STH" secondAttribute="bottom" id="TlZ-zQ-13U"/>
+                            <constraint firstItem="3LE-jC-UCQ" firstAttribute="top" secondItem="KTE-PP-7uc" secondAttribute="bottom" constant="20" id="UE3-Vk-Tq0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KTE-PP-7uc" secondAttribute="trailing" constant="-16" id="uys-BK-Lmd"/>
+                            <constraint firstItem="KTE-PP-7uc" firstAttribute="leading" secondItem="0Tu-hi-opa" secondAttribute="leadingMargin" constant="-16" id="z3Q-c1-1Wz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wg2-Zw-hZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="792.95352323838085"/>
         </scene>
         <!--Shop-->
         <scene sceneID="3LY-1z-TXm">
@@ -119,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eg-7P-5l4">
-                                <rect key="frame" x="348.5" y="186" width="10.5" height="21"/>
+                                <rect key="frame" x="348" y="186" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
